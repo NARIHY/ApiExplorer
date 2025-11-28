@@ -19,7 +19,7 @@ Idéal pour les développeurs qui veulent un testeur simple, léger et rapide di
 
 ## 🛠️ Technologies utilisées
 
-* **Angular** 17+
+* **Angular** 20+
 * **TypeScript**
 * **Angular Material**
 * **HttpClientModule**
@@ -31,8 +31,8 @@ Idéal pour les développeurs qui veulent un testeur simple, léger et rapide di
 ### 1️⃣ Cloner le projet
 
 ```bash
-git clone https://github.com/ton-github/angular-api-explorer.git
-cd angular-api-explorer
+git clone https://github.com/NARIHY/ApiExplorer.git
+cd ApiExplorer
 ```
 
 ### 2️⃣ Installer les dépendances
