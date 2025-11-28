@@ -109,7 +109,8 @@ Stocké côté client, rafraîchi automatiquement.
 Tu peux ajouter une capture une fois l'app terminée :
 
 ```
-![API Explorer Screenshot](./screenshot.png)
+<img width="1301" height="646" alt="image" src="https://github.com/user-attachments/assets/c4766616-5b01-450c-be3c-ec58e9423ee7" />
+
 ```
 
 
