@@ -1,0 +1,74 @@
+<div class="container">
+
+    <h2 class="title">API Explorer 🔍</h2>
+
+    <!-- URL + Méthode -->
+    <div class="row">
+        <mat-form-field class="field" appearance="outline">
+            <mat-label>URL</mat-label>
+            <input matInput [(ngModel)]="url" placeholder="https://api.example.com/users">
+        </mat-form-field>
+
+        <mat-form-field class="method-field" appearance="outline">
+            <mat-label>Méthode</mat-label>
+            <mat-select [(value)]="method">
+                <mat-option *ngFor="let m of methods" [value]="m">{{ m }}</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+
+    <!-- Authentication -->
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>🔐 Authentification / Headers</mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <div class="auth-grid">
+
+            <mat-form-field appearance="outline">
+                <mat-label>Client ID</mat-label>
+                <input matInput [(ngModel)]="clientId">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Client Secret</mat-label>
+                <input matInput [(ngModel)]="clientSecret" type="password">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="full">
+                <mat-label>Bearer Token</mat-label>
+                <input matInput [(ngModel)]="token" placeholder="eyJhbGciOi…">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="full">
+                <mat-label>Headers (JSON)</mat-label>
+                <textarea matInput rows="4" [(ngModel)]="headers"></textarea>
+            </mat-form-field>
+
+        </div>
+    </mat-expansion-panel>
+
+    <!-- Body -->
+    <mat-form-field appearance="outline" class="full">
+        <mat-label>Body (JSON)</mat-label>
+        <textarea matInput rows="6" [(ngModel)]="body"></textarea>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" class="send-btn" (click)="sendRequest()">
+        Envoyer
+    </button>
+
+    <!-- Résultat -->
+    <h3>Réponse :</h3>
+    <pre class="response-box">{{ response | json }}</pre>
+
+    <!-- Historique -->
+    <h3>Historique :</h3>
+    <mat-list>
+        <mat-list-item *ngFor="let item of history">
+            <strong>{{ item.method }}</strong> – {{ item.url }}
+            <span class="timestamp">{{ item.timestamp | date:'short' }}</span>
+        </mat-list-item>
+    </mat-list>
+
+</div>

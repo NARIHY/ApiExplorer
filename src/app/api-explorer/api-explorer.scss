@@ -1,0 +1,53 @@
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+.title {
+  margin-bottom: 15px;
+}
+
+.row {
+  display: flex;
+  gap: 15px;
+}
+
+.field {
+  flex: 1;
+}
+
+.method-field {
+  width: 150px;
+}
+
+.full {
+  width: 100%;
+}
+
+.send-btn {
+  margin-top: 10px;
+}
+
+.response-box {
+  background: #1e1e1e;
+  color: #dcdcdc;
+  padding: 15px;
+  border-radius: 6px;
+  white-space: pre-wrap;
+}
+
+.timestamp {
+  margin-left: auto;
+  opacity: 0.6;
+}
+
+.auth-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+
+  .full {
+    grid-column: span 2;
+  }
+}
