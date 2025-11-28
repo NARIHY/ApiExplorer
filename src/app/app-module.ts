@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
-
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { ApiExplorer } from './api-explorer/api-explorer';
